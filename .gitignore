@@ -1,0 +1,16 @@
+1.	 HTTP er nafnið í bókstöfum (adressið á síðunni). Það merkir að það geymir ekkert t.d. það er ekkert innbyggt session í http þannig öll request eru ný.
+2.	 
+2% Hvað er status code og hvað þýða eftirfarandi status codes, komdu með dæmi fyrir hvern flokk?
+		a)	1xx: Informational Messages: Transfer-Encoding sem segir client að serverinn býst við upplýsingum frá client t.d. Expect: 100-continue.
+		
+		b)	2xx: Successful: Basically merkir að request frá client hafi gengið upp i.e. 200 ok en síðan getur verið 202 accepted: sem merkir að upplýsingarnar geta verið öðrvísi út en búist var við.
+			204 No content. 205 Reset Content Client þarf að hlaða uppá nýtt þeim upplýsingum. 206 Partial Content
+		
+		c)	3xx: Redirection: 301 Moved Permanently: Upplýsingar hafa verið færðar yfir á nýtt url. 303 See Other: Upplýsingar hafa verið færðar í smá yfir á nýtt url en headerinn hefur location sem inniheldur tímabundna urlið. 304 Not Modified: Það hefur ekki orðið neinnar breytingar á staðsetningu upplýsinga og original upplýsingar eTag eru réttar
+
+		d)	 4xx: Client Error:	400 Bad Request: Gallað request. 401 Unauthorized: Það þurfa að vera upplýsingar varðandi credentials sem geta verið í Authorization header annars eru þær rangar. 403 Forbiden 	Server það var neitað servernum upplýsingum. 404 Not found. 405 Method Not Allowed: Vitlaust skrifað http sem serverinn skilur ekki. 409 Conflict server vill setja upplýsingar sem eru nýrri en þær sem eru hjá client þannig PUT virkar ekki.
+
+		e) 5xx: Server Error: 500 Internal server error er algengast. 501 Not Implemented: serverinn stiður ekki það sem er beðið um.
+		503 Service Unavailable. Serverinn hefur ekki svarað eða einhvað sem hindrar samskipti.
+
+Hverjar eru helstu nýjungar og breytingar með HTTP 2.0? 
