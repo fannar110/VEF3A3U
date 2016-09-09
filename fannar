@@ -33,3 +33,15 @@ b) XML
 	</pizzaOrder>
 </pizza>
 
+5. 3% Parsing JSON, sjá eftirfarandi uppsetingar og format fyrir ákveðin gögn;
+
+<?php
+$arr = array('location' => 'San Francisco, CA', 'date' => 'May 1', 'map' => 'img/map-ca.png');
+
+
+$js = json_encode($arr);
+
+$arr2 = json_decode($js, true);
+print_r($arr2);
+
+?>
