@@ -45,3 +45,13 @@ $arr2 = json_decode($js, true);
 print_r($arr2);
 
 ?>
+
+6. 5%
+Búðu til einfalda vefsíðu sem sækir gengisupplýsingar sem eru á JSON formati á
+http://docs.apis.is/#endpoint-currency.
+Notaðu t.d. file_get_contents() eða cURL eða álíka.
+Birtu gögnin í töfluformi
+<?php
+$result = file_get_contents('http://apis.is/currency/m5');
+print_r($result);
+?>
